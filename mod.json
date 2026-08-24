@@ -1,19 +1,18 @@
 {
 	"geode": "5.6.1",
-	"version": "6.10.0",
+	"version": "6.10.1",
 	"gd": {
 		"win": "2.2081",
 		"mac": "2.2081",
 		"android": "2.2081",
 		"ios": "2.2081"
 	},
-	"id": "hjfod.betteredit",
-	"name": "BetterEdit",
-	"developers": ["HJfod"],
-	"description": "The Ultimate Editor Mod",
+	"id": "Benno111.evenbetteredit",
+	"name": "EvenBetterEdit",
+	"developers": ["Benno111"],
+	"description": "The Ultimate Editor Mod Reimagined",
 	"links": {
-		"homepage": "https://betteredit.pro",
-		"source": "https://github.com/HJfod/BetterEdit",
+		"source": "https://github.com/Benno111/EvenBetterEdit",
 		"community": "https://discord.gg/UGHDfzQtpz"
 	},
 	"dependencies": {
@@ -108,6 +107,27 @@
 			"name": "Pinch to Zoom",
 			"description": "When enabled, you can use two fingers to zoom",
 			"platforms": ["android"]
+		},
+		"right-stick-camera-pan": {
+			"type": "bool",
+			"default": true,
+			"name": "Right Stick Camera Pan",
+			"description": "When enabled, the controller right joystick pans the editor camera",
+			"platforms": ["win"]
+		},
+		"right-stick-camera-pan-speed": {
+			"type": "float",
+			"default": 700,
+			"min": 100,
+			"max": 2000,
+			"name": "Right Stick Pan Speed",
+			"description": "How fast the controller right joystick pans the editor camera",
+			"control": {
+				"slider": true,
+				"slider-step": 25
+			},
+			"platforms": ["win"],
+			"enable-if": "right-stick-camera-pan"
 		},
 		"scale-rotate-input-modifier-keys": {
 			"type": "bool",
@@ -213,8 +233,7 @@
 			"type": "bool",
 			"default": true,
 			"name": "Group Summary Button",
-			"description": "Show a button for opening <co>Group Summary</c> in the editor toolbar. You can alternatively set a keybind for opening <co>Group Summary</c>.",
-			"enable-if-description": "This feature is Supporter-only, but will be free soon!"
+			"description": "Show a button for opening <co>Group Summary</c> in the editor toolbar. You can alternatively set a keybind for opening <co>Group Summary</c>."
 		},
 		"trigger-indicator-section": {
 			"type": "title",

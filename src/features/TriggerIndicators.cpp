@@ -7,7 +7,6 @@
 #include <Geode/utils/cocos.hpp>
 #include <Geode/ui/BasedButtonSprite.hpp>
 #include <Geode/utils/ranges.hpp>
-#include <features/supporters/Pro.hpp>
 #include <utils/ObjectIDs.hpp>
 #include <utils/Editor.hpp>
 #include <numbers>

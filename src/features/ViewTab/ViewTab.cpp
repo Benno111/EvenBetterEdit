@@ -12,7 +12,6 @@
 #include <utils/BEMenuItemToggler.hpp>
 #include <utils/Editor.hpp>
 #include <utils/HolyUB.hpp>
-#include <features/supporters/Pro.hpp>
 #include <alphalaneous.editortab_api/include/EditorTabAPI.hpp>
 
 using namespace geode::prelude;

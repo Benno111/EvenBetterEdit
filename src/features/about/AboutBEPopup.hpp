@@ -18,7 +18,6 @@ public:
     void onReportBug(CCObject*);
     void onSuggestFeature(CCObject*);
     void onSupport(CCObject*);
-    void onSupporters(CCObject*);
     void onChangelog(CCObject*);
     void onSpecialThanks(CCObject*);
     void onDevLink(CCObject* sender);

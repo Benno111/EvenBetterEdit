@@ -18,8 +18,6 @@ file(GLOB SOURCES
 	src/features/backups/*.cpp
 	src/features/ViewTab/*.cpp
 	src/features/scripting/*.cpp
-	src/features/supporters/*.cpp
-	src/server/*.cpp
 	src/editor/*.cpp
 	src/utils/*.cpp
 	src/*.cpp
@@ -37,13 +35,6 @@ endif()
 add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode SYSTEM)
 
 setup_geode_mod(${PROJECT_NAME})
-# For server stuff we need some lib for RSA and rn we are using wolfSSL because 
-# dank_meme recommended it
-set(WOLFSSL_ENCKEYS ON)
-CPMAddPackage("gh:wolfSSL/wolfssl@5.8.0-stable")
-target_link_libraries(${PROJECT_NAME} wolfssl)
-target_compile_definitions(wolfssl PUBLIC WOLFSSL_PUB_PEM_TO_DER)
-target_compile_definitions(${PROJECT_NAME} PUBLIC WOLFSSL_PUB_PEM_TO_DER)
 
 # Bad code will NOT be deployed!
 if(MSVC)

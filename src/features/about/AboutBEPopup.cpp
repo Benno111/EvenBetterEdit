@@ -4,8 +4,6 @@
 #include <Geode/ui/MDTextArea.hpp>
 #include <Geode/binding/ButtonSprite.hpp>
 #include <Geode/utils/web.hpp>
-#include <features/supporters/SupportersPopup.hpp>
-#include <features/supporters/ActivateLicensePopup.hpp>
 
 struct Dev {
     const char* name;
@@ -144,7 +142,6 @@ bool AboutBEPopup::init() {
         { "changelog-btn", "Changelog", menu_selector(AboutBEPopup::onChangelog) },
         { "special-thanks-btn", "Special Thanks", menu_selector(AboutBEPopup::onSpecialThanks) },
         { "support-btn", "Support BE", menu_selector(AboutBEPopup::onSupport) },
-        { "supporters-btn", "Supporters", menu_selector(AboutBEPopup::onSupporters) },
     }) {
         auto spr = ButtonSprite::create(std::get<1>(pair), "goldFont.fnt", "GJ_button_05.png", .8f);
         spr->setScale(.55f);
@@ -155,8 +152,6 @@ bool AboutBEPopup::init() {
 
     menu->setLayout(RowLayout::create()->setGrowCrossAxis(true));
     m_mainLayer->addChildAtPosition(menu, Anchor::Center, ccp(0, -60));
-
-    pro::addAboutPopupStuff(this);
 
     // BE links
 
@@ -207,24 +202,17 @@ void AboutBEPopup::onClose(CCObject* sender) {
 void AboutBEPopup::onSupport(CCObject*) {
     createQuickPopup(
         "Support BetterEdit",
-        "The <cp>Supporter Perks</c> for BetterEdit are <co>about to be "
-        "discontinued</c> as my financial situation has gotten better and "
-        "<cj>I don't want to paywall features</c>. If you still want to support the mod "
-        "and donate a thank you, feel free to do so, but be aware that the only "
-        "perk I can offer is your name in the Supporters List!",
-        "OK", "Activate Existing License",
+        "All BetterEdit features are available to everyone. If you still want "
+        "to support the mod and donate as a thank you, you can do so on Ko-fi.",
+        "OK", "Open Ko-fi",
         380,
         [](auto, bool btn2) {
             if (btn2) {
-                ActivateLicensePopup::tryShowIfLoggedIn();
+                web::openLinkInBrowser("https://ko-fi.com/hjfod");
             }
         }
     );
 }
-void AboutBEPopup::onSupporters(CCObject*) {
-    pro::SupportersPopup::create()->show();
-}
-
 void AboutBEPopup::onSuggestFeature(CCObject*) {
     createQuickPopup(
         "Suggest a Feature",

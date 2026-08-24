@@ -1,6 +1,5 @@
 #pragma once
 
-#include <features/supporters/Pro.hpp>
 #include <Geode/ui/Popup.hpp>
 #include <Geode/ui/TextInput.hpp>
 
