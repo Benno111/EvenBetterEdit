@@ -8,7 +8,7 @@ else()
 endif()
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
-project(BetterEdit VERSION 1.0.0)
+project(evenbetteredit VERSION 1.0.0)
 
 file(GLOB SOURCES
 	src/features/*.cpp
