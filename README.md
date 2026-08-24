@@ -57,9 +57,6 @@ You can also contact the developer of the mod (HJfod) directly through Discord o
 
 BetterEdit's development is supported via [donations on my Ko-fi](https://ko-fi.com/hjfod)!
 
-> [!NOTE]
-> Supporters used to receive exclusive features, however these features have since been made free. You may still support if you want to say thanks for my work on BetterEdit and Geode, but please be aware that this will NOT come with any exclusive features anymore!
-
 ## :balance_scale: Licensing
 
 **BetterEdit is licensed under the [LGPLv3](https://www.gnu.org/licenses/lgpl-3.0.en.html) license.**

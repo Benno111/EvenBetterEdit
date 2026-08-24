@@ -4,6 +4,7 @@
 #include <Geode/binding/CCMenuItemSpriteExtra.hpp>
 #include <Geode/loader/Mod.hpp>
 #include <Geode/utils/cocos.hpp>
+#include <alphalaneous.editortab_api/include/EditorTabAPI.hpp>
 #include <algorithm>
 #include <cstdint>
 #include <cmath>
@@ -172,27 +173,22 @@ namespace {
             return;
         }
 
-        std::vector<CCMenuItemSpriteExtra*> modes;
-        for (auto btn : { ui->m_buildModeBtn, ui->m_editModeBtn, ui->m_deleteModeBtn }) {
-            if (btn && nodeIsVisible(btn) && btn->isEnabled()) {
-                modes.push_back(btn);
-            }
-        }
-        if (auto viewBtn = typeinfo_cast<CCMenuItemSpriteExtra*>(ui->querySelector("view-button"_spr))) {
-            if (nodeIsVisible(viewBtn) && viewBtn->isEnabled()) {
-                modes.push_back(viewBtn);
-            }
-        }
-        if (modes.empty()) {
-            return;
+        std::vector<ZStringView> modes {
+            alpha::editor_tabs::BUILD,
+            alpha::editor_tabs::EDIT,
+            alpha::editor_tabs::DELETE,
+        };
+        if (alpha::editor_tabs::nodeForTab("view"_spr)) {
+            modes.push_back("view"_spr);
         }
 
-        auto current = std::find_if(modes.begin(), modes.end(), [ui](auto btn) {
-            return btn->getTag() == ui->m_selectedMode;
+        auto currentMode = alpha::editor_tabs::getCurrentMode();
+        auto current = std::find_if(modes.begin(), modes.end(), [&currentMode](ZStringView mode) {
+            return currentMode == Ok(mode);
         });
         auto index = current == modes.end() ? 0 : static_cast<int>(std::distance(modes.begin(), current));
         auto nextIndex = (index + direction + static_cast<int>(modes.size())) % static_cast<int>(modes.size());
-        modes.at(nextIndex)->activate();
+        alpha::editor_tabs::switchMode(modes.at(nextIndex));
     }
 
     EditButtonBar* getActiveButtonBar(EditorUI* ui) {
