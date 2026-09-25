@@ -79,6 +79,24 @@
 			"name": "Copy & Paste to Clipboard",
 			"description": "Copy & paste objects to/from system clipboard. This means that when you copy objects, you can paste it in a text editor in its text representation, and also paste it in to the editor later"
 		},
+		"auto-options-section": {
+			"type": "title",
+			"name": "Auto Options"
+		},
+		"custom-setting-value": {
+			"type": "int",
+			"default": 0,
+			"min": 0,
+			"max": 9999,
+			"name": "Options Group ID",
+			"description": "The group ID assigned to generated Options objects. Set this to 0 to leave the group unset."
+		},
+		"hideBtn": {
+			"type": "bool",
+			"default": false,
+			"name": "Hide Auto Options Button",
+			"description": "Hides the Auto Options toggle next to the editor playtest button."
+		},
 		"controls-section": {
 			"type": "title",
 			"name": "Mouse & Keybind Settings"

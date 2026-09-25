@@ -19,6 +19,11 @@
 
 A mod that makes the <a href="https://store.steampowered.com/app/322170/Geometry_Dash/">Geometry Dash</a> editor, well, <i>better</i>.
 
+EvenBetterEdit also includes
+[Auto-Options](https://github.com/BlueToadMakerr/Auto-Options). Its editor
+button records player jump presses and releases as Options objects while a
+playtest is running, with an optional group ID configured in the mod settings.
+
 ## :rocket: Installation
 
 You can install BetterEdit through [Geode](https://geode-sdk.org). After installing Geode, simply search for the mod on the in-game browser, and click install.
