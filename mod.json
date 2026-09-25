@@ -81,21 +81,34 @@
 		},
 		"auto-options-section": {
 			"type": "title",
-			"name": "Auto Options"
+			"name": "Automatic Object Options"
 		},
-		"custom-setting-value": {
-			"type": "int",
-			"default": 0,
-			"min": 0,
-			"max": 9999,
-			"name": "Options Group ID",
-			"description": "The group ID assigned to generated Options objects. Set this to 0 to leave the group unset."
+		"enable-auto-options": {
+			"type": "bool",
+			"default": true,
+			"name": "Enable Auto Options",
+			"description": "Automatically applies the selected object options whenever you place a new object in the editor."
 		},
-		"hideBtn": {
+		"auto-option-dont-fade": {
+			"type": "bool",
+			"default": true,
+			"name": "Automatically Don't Fade",
+			"description": "Enables <cy>Don't Fade</c> on newly placed objects.",
+			"enable-if": "enable-auto-options"
+		},
+		"auto-option-dont-enter": {
+			"type": "bool",
+			"default": true,
+			"name": "Automatically Don't Enter",
+			"description": "Enables <cy>Don't Enter</c> on newly placed objects.",
+			"enable-if": "enable-auto-options"
+		},
+		"auto-option-high-detail": {
 			"type": "bool",
 			"default": false,
-			"name": "Hide Auto Options Button",
-			"description": "Hides the Auto Options toggle next to the editor playtest button."
+			"name": "Automatically High Detail",
+			"description": "Enables <cy>High Detail</c> on newly placed objects.",
+			"enable-if": "enable-auto-options"
 		},
 		"controls-section": {
 			"type": "title",
