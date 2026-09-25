@@ -19,6 +19,11 @@
 
 A mod that makes the <a href="https://store.steampowered.com/app/322170/Geometry_Dash/">Geometry Dash</a> editor, well, <i>better</i>.
 
+EvenBetterEdit also includes automatic object options based on
+[Auto-Options](https://github.com/BlueToadMakerr/Auto-Options): newly placed
+objects can automatically receive Don't Fade, Don't Enter, and High Detail
+through the mod's settings.
+
 ## :rocket: Installation
 
 You can install BetterEdit through [Geode](https://geode-sdk.org). After installing Geode, simply search for the mod on the in-game browser, and click install.

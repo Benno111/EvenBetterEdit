@@ -79,6 +79,37 @@
 			"name": "Copy & Paste to Clipboard",
 			"description": "Copy & paste objects to/from system clipboard. This means that when you copy objects, you can paste it in a text editor in its text representation, and also paste it in to the editor later"
 		},
+		"auto-options-section": {
+			"type": "title",
+			"name": "Automatic Object Options"
+		},
+		"enable-auto-options": {
+			"type": "bool",
+			"default": true,
+			"name": "Enable Auto Options",
+			"description": "Automatically applies the selected object options whenever you place a new object in the editor."
+		},
+		"auto-option-dont-fade": {
+			"type": "bool",
+			"default": true,
+			"name": "Automatically Don't Fade",
+			"description": "Enables <cy>Don't Fade</c> on newly placed objects.",
+			"enable-if": "enable-auto-options"
+		},
+		"auto-option-dont-enter": {
+			"type": "bool",
+			"default": true,
+			"name": "Automatically Don't Enter",
+			"description": "Enables <cy>Don't Enter</c> on newly placed objects.",
+			"enable-if": "enable-auto-options"
+		},
+		"auto-option-high-detail": {
+			"type": "bool",
+			"default": false,
+			"name": "Automatically High Detail",
+			"description": "Enables <cy>High Detail</c> on newly placed objects.",
+			"enable-if": "enable-auto-options"
+		},
 		"controls-section": {
 			"type": "title",
 			"name": "Mouse & Keybind Settings"
