@@ -19,10 +19,12 @@
 
 A mod that makes the <a href="https://store.steampowered.com/app/322170/Geometry_Dash/">Geometry Dash</a> editor, well, <i>better</i>.
 
-EvenBetterEdit also includes automatic object options based on
-[Auto-Options](https://github.com/BlueToadMakerr/Auto-Options): newly placed
-objects can automatically receive Don't Fade, Don't Enter, and High Detail
-through the mod's settings.
+EvenBetterEdit also includes
+[Auto-Options](https://github.com/BlueToadMakerr/Auto-Options). Its editor
+button records player jump presses and releases as Options objects while a
+playtest is running, with an optional group ID configured in the mod settings.
+The separate **Automatic Object Defaults** feature can also enable Don't Fade,
+Don't Enter, and High Detail whenever an object is placed.
 
 ## :rocket: Installation
 
