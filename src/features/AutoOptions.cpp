@@ -83,6 +83,8 @@ class $modify(AutoOptionsEditorLayer, LevelEditorLayer) {
         LevelEditorLayer::onPlaytest();
     }
 
+    // These functions are inline on Windows, so Geode cannot hook them there.
+#ifndef GEODE_IS_WINDOWS
     $override
     void onResumePlaytest() {
         setToggleVisible(false);
@@ -94,6 +96,7 @@ class $modify(AutoOptionsEditorLayer, LevelEditorLayer) {
         setToggleVisible(true);
         LevelEditorLayer::onPausePlaytest();
     }
+#endif
 
     $override
     void onStopPlaytest() {
@@ -133,6 +136,12 @@ class $modify(AutoOptionsEditorUI, EditorUI) {
         if (m_editorLayer->m_playbackMode == PlaybackMode::Paused) {
             setToggleVisible(true);
         }
+#ifdef GEODE_IS_WINDOWS
+        else if (m_editorLayer->m_playbackMode == PlaybackMode::Playing) {
+            // Handle resume here because LevelEditorLayer::onResumePlaytest is inline.
+            setToggleVisible(false);
+        }
+#endif
     }
 #endif
 
