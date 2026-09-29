@@ -26,6 +26,10 @@ playtest is running, with an optional group ID configured in the mod settings.
 The separate **Automatic Object Defaults** feature can also enable Don't Fade,
 Don't Enter, and High Detail whenever an object is placed.
 
+EvenBetterEdit also restores the pre-2.2 **Level Copy** dialog. When duplicating
+a local level, you can independently keep its attempt statistics and completion
+progress in the new copy.
+
 ## :rocket: Installation
 
 You can install BetterEdit through [Geode](https://geode-sdk.org). After installing Geode, simply search for the mod on the in-game browser, and click install.
