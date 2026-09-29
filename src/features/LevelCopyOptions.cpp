@@ -87,10 +87,10 @@ class $modify(LevelCopyOptionsLayer, EditLevelLayer) {
         bool showingCopyOptions = false;
     };
 
-    void onClone(CCObject* sender) {
+    void onClone() {
         if (m_fields->showingCopyOptions) {
             m_fields->showingCopyOptions = false;
-            EditLevelLayer::onClone(sender);
+            EditLevelLayer::onClone();
             return;
         }
 
@@ -102,7 +102,7 @@ class $modify(LevelCopyOptionsLayer, EditLevelLayer) {
 
             auto source = self->m_level;
             self->m_fields->showingCopyOptions = true;
-            self->onClone(nullptr);
+            self->onClone();
 
             for (auto level : CCArrayExt<GJGameLevel*>(manager->m_localLevels)) {
                 if (oldLevels.contains(level))
