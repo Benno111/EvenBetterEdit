@@ -30,6 +30,31 @@ EvenBetterEdit also restores the pre-2.2 **Level Copy** dialog. When duplicating
 a local level, you can independently keep its attempt statistics and completion
 progress in the new copy.
 
+### Using Level Copy options
+
+1. Open **Create > My Levels** and select the level you want to duplicate.
+2. Press the level's **Copy** button. The **Level Copy** dialog appears before
+   the duplicate is created.
+3. Enable **Copy attempts and jumps** to retain attempts, jumps, clicks, and
+   attempt time in the duplicate.
+4. Enable **Copy normal and practice progress** to retain both completion
+   percentages in the duplicate.
+5. Press **Copy** in the dialog. The level itself is always duplicated; any
+   statistics whose option is disabled start with the game's normal defaults.
+
+### Upload copy settings
+
+The level upload screen also has a **Copy Settings** button. Use it to choose
+whether other players may copy the uploaded level:
+
+* Disable **Allow level copying** to make the level non-copyable.
+* Enable **Allow level copying** and **Free copy** to let anyone copy it without
+  a password.
+* Enable **Allow level copying**, disable **Free copy**, and enter a numeric
+  password to require that password when the level is copied.
+
+Press **Save** before uploading the level to apply the selected copy setting.
+
 ## :rocket: Installation
 
 You can install BetterEdit through [Geode](https://geode-sdk.org). After installing Geode, simply search for the mod on the in-game browser, and click install.
