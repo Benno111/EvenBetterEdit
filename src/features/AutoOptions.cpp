@@ -83,6 +83,7 @@ class $modify(AutoOptionsEditorLayer, LevelEditorLayer) {
         LevelEditorLayer::onPlaytest();
     }
 
+#ifdef GEODE_IS_ANDROID
     $override
     void onResumePlaytest() {
         setToggleVisible(false);
@@ -94,6 +95,7 @@ class $modify(AutoOptionsEditorLayer, LevelEditorLayer) {
         setToggleVisible(true);
         LevelEditorLayer::onPausePlaytest();
     }
+#endif
 
     $override
     void onStopPlaytest() {
